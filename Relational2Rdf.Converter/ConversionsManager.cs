@@ -66,7 +66,7 @@ namespace Relational2Rdf.Converter
 
 		public async Task<string> ConvertAsync(IRelationalDataSource source)
 		{
-			string outputFile = Path.Join(_settings.OutputDir.FullName, _settings.FileName ?? $"{source.Name.Replace(Path.GetInvalidFileNameChars())}.ttl");
+			string outputFile = Path.Join(_settings.OutputDir.FullName, _settings.FileName ?? $"{source.SourceName.Replace(Path.GetInvalidFileNameChars())}.ttl");
 			var writer = WriterFactory.TurtleWriter(outputFile);
 			_logger.LogDebug("Created output turtle output file {path} for source {source}", outputFile, source.Name);
 			using (Profiler.Trace("InitializeConversionFactory", source.Name))

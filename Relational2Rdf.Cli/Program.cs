@@ -57,7 +57,7 @@ IConverterFactory GetConversionFactory(ConversionParameters parameters, ILoggerF
 async Task RunSiard([Argument(Name = "Siard File", Description = "Path to the archive file to convert")] string siardFile, ConversionParameters parameters)
 {
 	var loggerFactory = app.Services.GetRequiredService<ILoggerFactory>();
-	if(parameters.LogFile != null)
+	if (parameters.LogFile != null)
 	{
 		loggerFactory.AddFile(parameters.LogFile, opts =>
 		{
@@ -69,7 +69,8 @@ async Task RunSiard([Argument(Name = "Siard File", Description = "Path to the ar
 
 	var reader = new SiardFileReader();
 	var factory = GetConversionFactory(parameters, loggerFactory);
-	var converter = new ConversionsManager(parameters.BuildConverterConfig(), factory, loggerFactory);
+	var config = parameters.BuildConverterConfig();
+	var converter = new ConversionsManager(config, factory, loggerFactory);
 	var attr = File.GetAttributes(siardFile);
 	var files = attr.HasFlag(FileAttributes.Directory) ? Directory.GetFiles(siardFile, "*.siard") : new string[] { siardFile };
 

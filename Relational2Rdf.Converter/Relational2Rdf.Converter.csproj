@@ -8,11 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Aeolin.AwosFramework" Version="1.3.5" />
-    <PackageReference Include="Aeolin.AwosFramework.Rdf.Lib" Version="0.3.3" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Libraries\AwosFramework.Rdf\AwosFramework.Rdf.Lib\AwosFramework.Rdf.Lib.csproj" />
     <ProjectReference Include="..\Relational2Rdf.Common.Shims\Relational2Rdf.Common.Shims.csproj" />
     <ProjectReference Include="..\Relational2Rdf.Common\Relational2Rdf.Common.csproj" />
     <ProjectReference Include="..\Relational2Rdf.DataSources.Siard\Relational2Rdf.DataSources.Siard.csproj" />

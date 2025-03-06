@@ -2,7 +2,7 @@
   "profiles": {
     "Relational2Rdf.Cli": {
       "commandName": "Project",
-      "commandLineArgs": "siard C:\\Users\\flori\\Desktop\\Resources\\stapfer.siard -v Ai -k sk-proj-nPb7ruEn30NWF3xzkHhST3BlbkFJIorLcWVGduaKNt1eEI9O -m gpt-3.5-turbo --trace --table-config ./table-config.json --ai-service OpenAi --trace -f stapfer-ai.ttl -l ./stapfer.log --log-level Trace"
+      "commandLineArgs": "siard C:\\Users\\flori\\Desktop\\siard -v Ai -k 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 -m gpt-3.5-turbo --trace --table-config ./table-config.json --ai-service OpenAi --trace -l ./stapfer.log --log-level Trace -o C:\\Users\\flori\\Desktop\\siard-output"
     }
   }
 }
