@@ -9,6 +9,7 @@ namespace Relational2Rdf.Common.Abstractions
 {
 	public interface IRelationalDataSource : IDisposable
 	{
+		public string SourceName { get; }
 		public string Name { get; }
 		public string ProducerApplication { get; }
 		public string DataOwner { get; }

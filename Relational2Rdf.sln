@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relational2Rdf.Converter.On
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relational2Rdf.Converter.Ai", "Relational2Rdf.Converter.Ai\Relational2Rdf.Converter.Ai.csproj", "{3218C84B-A206-4BC0-AB78-94356BFA5389}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{9E107C2F-19A6-4831-9C90-8CB79BBE2A3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwosFramework.Rdf.Lib", "Libraries\AwosFramework.Rdf\AwosFramework.Rdf.Lib\AwosFramework.Rdf.Lib.csproj", "{04EC3E1C-0F0E-4B29-BF25-31165016A7F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,9 +61,16 @@ Global
 		{3218C84B-A206-4BC0-AB78-94356BFA5389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3218C84B-A206-4BC0-AB78-94356BFA5389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3218C84B-A206-4BC0-AB78-94356BFA5389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04EC3E1C-0F0E-4B29-BF25-31165016A7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04EC3E1C-0F0E-4B29-BF25-31165016A7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04EC3E1C-0F0E-4B29-BF25-31165016A7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04EC3E1C-0F0E-4B29-BF25-31165016A7F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{04EC3E1C-0F0E-4B29-BF25-31165016A7F4} = {9E107C2F-19A6-4831-9C90-8CB79BBE2A3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F8100408-30A1-4BDB-AF62-E06F4051B859}

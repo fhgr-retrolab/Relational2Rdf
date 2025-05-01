@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Relational2Rdf.Converter.Ai.Conversion
 {
@@ -18,9 +19,9 @@ namespace Relational2Rdf.Converter.Ai.Conversion
 		private FrozenDictionary<string, string> _tableNames;
 		private readonly Dictionary<string, AtomicCounter> _typeIdCounters = new Dictionary<string, AtomicCounter>();
 
-		public string GetTableName(ITable table) => _tableNames.GetValueOrDefault(table.Name, table.Name);
-		public string GetTableName(IType table) => _tableNames.GetValueOrDefault(table.Name, table.Name);
-		public string GetTableName(string table) => _tableNames.GetValueOrDefault(table, table);
+		public string GetTableName(ITable table) => _tableNames.GetValueOrDefault(table.Name,  table.Name.IriFriendly());
+		public string GetTableName(IType table) => _tableNames.GetValueOrDefault(table.Name, table.Name.IriFriendly());
+		public string GetTableName(string table) => _tableNames.GetValueOrDefault(table, table.IriFriendly());
 
 		private AtomicCounter GetOrCreateCounter(string name)
 		{

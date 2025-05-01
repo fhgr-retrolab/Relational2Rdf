@@ -1,0 +1,3 @@
+[submodule "Libraries/AwosFramework.Rdf"]
+	path = Libraries/AwosFramework.Rdf
+	url = https://github.com/Aeolin/AwosFramework.Rdf

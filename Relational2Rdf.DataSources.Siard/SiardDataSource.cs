@@ -14,6 +14,7 @@ namespace Relational2Rdf.DataSources.Siard
 {
 	public class SiardDataSource : IRelationalDataSource, IDisposable
 	{
+		public string SourceName { get; init; }
 		internal ISiardArchive Archive { get; init; }
 		private string _path;
 
@@ -23,6 +24,7 @@ namespace Relational2Rdf.DataSources.Siard
 			using var zip = new ZipArchive(File.OpenRead(path), ZipArchiveMode.Read, false);
 			if (SiardFactory.TryGetSiardArchive(zip, out var archive))
 			{
+				SourceName = Path.GetFileNameWithoutExtension(path);
 				Archive = archive;
 				foreach (var schema in Archive.Schemas)
 				{
@@ -81,7 +83,7 @@ namespace Relational2Rdf.DataSources.Siard
 				superSchema = ((IRelationalDataSource)this).FindSchema(sType.SuperTypeSchema);
 				return superSchema.FindType(sType.SuperTypeName);
 			}
-				
+
 			throw new ArgumentException($"Siard V1 doesn't support types");
 		}
 
